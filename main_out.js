@@ -666,14 +666,14 @@
             _color: "#000000",
             _stroke: !1,
             _strokeColor: "#000000",
-            _size: 16,
+            _size: 40,
             _canvas: null,
             _ctx: null,
             _dirty: !1,
-            setSize: function(a) {
+            /*setSize: function(a) {
                 this._size !=
                     a && (this._size = a, this._dirty = !0)
-            },
+            }*/,
             setColor: function(a) {
                 this._color != a && (this._color = a, this._dirty = !0)
             },
