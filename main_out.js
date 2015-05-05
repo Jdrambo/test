@@ -402,9 +402,9 @@
                 a.fillStyle = "#FFFFFF";
                 c = null;
                 c = "Leaderboard";
-                a.font = "30px Ubuntu";
+                a.font = "60px Arial";
                 a.fillText(c, 100 - a.measureText(c).width / 2, 40);
-                a.font = "20px Ubuntu";
+                a.font = "20px Arial";
                 for (b = 0; b < z.length; ++b) c = z[b] || "An unnamed cell", Q || 0 != m.length && m[0].name == c || (c = "An unnamed cell"), c = b + 1 + ". " + c, a.fillText(c, 100 - a.measureText(c).width / 2, 70 + 24 * b)
             } else A = null
     }
