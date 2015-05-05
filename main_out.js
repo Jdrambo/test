@@ -324,7 +324,7 @@
     function Aa() {
         if (0 != m.length) {
             for (var a = 0, b = 0; b < m.length; b++) a += m[b].size;
-            a = Math.pow(Math.min(64 / a, 1), .4) * Math.max(p / 965, n / 1920);
+            a = Math.pow(Math.min(64 / a, 1), 1/*.4*/) * Math.max(p / 965, n / 1920);
             s = (9 * s + a) / 10
         }
     }
@@ -335,7 +335,7 @@
         Aa();
         F = +new Date;
         if (0 < m.length) {
-            for (var b = 0, c = 0, f = 0; f < m.length; f++) m[f].updatePos(), b += m[f].x / m.length*, c += m[f].y / m.length;
+            for (var b = 0, c = 0, f = 0; f < m.length; f++) m[f].updatePos(), b += m[f].x / m.length, c += m[f].y / m.length;
             w = (w + b) / 2;
             x = (x + c) / 2
         }
