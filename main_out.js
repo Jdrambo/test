@@ -178,7 +178,7 @@
 
     function ya(a) {
         F = +new Date;
-        var b = Math.random(),
+        var b = 1/*Math.random()*/,
             c = 1;
         aa = !1;
         for (var f = a.getUint16(c, !0), c = c + 2, d = 0; d < f; ++d) {
@@ -335,13 +335,16 @@
         }
     }
 
+/* **************************************************************** */
+/*                   fout la merde au niveau du zoom                */
+/* **************************************************************** */
     function U() {
         var a = +new Date;
         ++Ba;
         Aa();
         F = +new Date;
         if (0 < m.length) {
-            for (var b = 0, c = 0, f = 0; f < m.length; f++) m[f].updatePos(), b += m[f].x /*/ m.length*/, c += m[f].y /*/ m.length*/;
+            for (var b = 0, c = 0, f = 0; f < m.length; f++) m[f].updatePos(), b += m[f].x / m.length, c += m[f].y / m.length;
             w = (w + b) / 2;
             x = (x + c) / 2
         }
