@@ -1,7 +1,6 @@
 (function(g, v) {
     function ta() {
         ea();
-        alert('ok');
         setInterval(ea, 18E4);
         B = S = document.getElementById("canvas");
         d = B.getContext("2d");
