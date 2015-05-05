@@ -8,7 +8,7 @@
             if (fa) {
                 var b = a.clientX - (5 + n),
                     c = a.clientY - (5 + n);
-                if (Math.sqrt(b * b + c * c) <= n / 5 / 2) {
+                if (Math.sqrt(b * b + c * c) <= n) {
                     G();
                     C(17);
                     return
@@ -52,10 +52,10 @@
     function ua() {
         for (var a = Number.POSITIVE_INFINITY, b = Number.POSITIVE_INFINITY, c = Number.NEGATIVE_INFINITY, f = Number.NEGATIVE_INFINITY, d = 0, e = 0; e < r.length; e++) d = Math.max(r[e].size, d), a = Math.min(r[e].x, a), b = Math.min(r[e].y, b), c = Math.max(r[e].x, c), f = Math.max(r[e].y, f);
         V = QUAD.init({
-            minX: a - (d + 100),
-            minY: b - (d + 100),
-            maxX: c + (d + 100),
-            maxY: f + (d + 100)
+            minX: a - (d + 120),
+            minY: b - (d + 120),
+            maxX: c + (d + 120),
+            maxY: f + (d + 120)
         });
         for (e = 0; e < r.length; e++)
             if (a = r[e], a.shouldRender())
