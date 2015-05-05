@@ -45,7 +45,7 @@
         g.onresize = ga;
         ga();
         g.requestAnimationFrame ? g.requestAnimationFrame(ha) : setInterval(U, 1E3 / 60);
-        setInterval(G, 100);
+        setInterval(G, 500);
         ia(v("#region").val())
     }
 
