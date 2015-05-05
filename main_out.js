@@ -52,14 +52,14 @@
     function ua() {
         for (var a = Number.POSITIVE_INFINITY, b = Number.POSITIVE_INFINITY, c = Number.NEGATIVE_INFINITY, f = Number.NEGATIVE_INFINITY, d = 0, e = 0; e < r.length; e++) d = Math.max(r[e].size, d), a = Math.min(r[e].x, a), b = Math.min(r[e].y, b), c = Math.max(r[e].x, c), f = Math.max(r[e].y, f);
         V = QUAD.init({
-            minX: a - (d + 200),
-            minY: b - (d + 200),
-            maxX: c + (d + 200),
-            maxY: f + (d + 200)
+            minX: a - (d + 100),
+            minY: b - (d + 100),
+            maxX: c + (d + 100),
+            maxY: f + (d + 100)
         });
         for (e = 0; e < r.length; e++)
             if (a = r[e], a.shouldRender())
-                for (b = 0; b < a.points.length; ++b) V.insert(a.points[b])
+                for (b = 0; b < a.points.length; b += 20) V.insert(a.points[b])
     }
 
     function T() {
