@@ -635,7 +635,7 @@
                     da ? (d.fillStyle = "#FFFFFF", d.strokeStyle = "#AAAAAA") : (d.fillStyle = this.color, d.strokeStyle = this.color);
                     d.beginPath();
                     d.lineWidth = 10;
-                    d.lineCap = "round";
+                    d.lineCap = "mitter";
                     d.lineJoin = this.isVirus ? "mitter" : "round";
                     a = this.getNumPoints();
                     d.moveTo(this.points[0].x, this.points[0].y);
@@ -670,10 +670,10 @@
             _canvas: null,
             _ctx: null,
             _dirty: !1,
-            /*setSize: function(a) {
+            setSize: function(a) {
                 this._size !=
                     a && (this._size = a, this._dirty = !0)
-            }*/,
+            },
             setColor: function(a) {
                 this._color != a && (this._color = a, this._dirty = !0)
             },
