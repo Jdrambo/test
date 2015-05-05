@@ -6,8 +6,8 @@
         d = B.getContext("2d");
         B.onmousedown = function(a) {
             if (fa) {
-                var b = a.clientX - (10 + n / 5 / 2),
-                    c = a.clientY - (10 + n / 5 / 2);
+                var b = a.clientX - (10 + n),
+                    c = a.clientY - (10 + n);
                 if (Math.sqrt(b * b + c * c) <= n / 5 / 2) {
                     G();
                     C(17);
@@ -368,7 +368,6 @@
         I = Math.max(I, Ca());
         0 != I && (null == O && (O = new P(24, "#FFFFFF")), O.setValue("Score: " + ~~(I / 100)), c = O.render(), b = c.width, d.globalAlpha = .2, d.fillStyle = "#000000", d.fillRect(10, p - 10 - 24 - 10, b + 10, 34), d.globalAlpha = 1, d.drawImage(c, 15, p - 10 - 24 - 5));
         Da();
-        alert('lol');
         a = +new Date - a;
         a > 1E3 / 60 ? q -= .01 : a < 1E3 / 65 && (q += .01);.4 > q && (q = .4);
         1 < q && (q = 1)
