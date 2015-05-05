@@ -59,7 +59,7 @@
         });
         for (e = 0; e < r.length; e++)
             if (a = r[e], a.shouldRender())
-                for (b = 0; b < a.points.length; b += 20) V.insert(a.points[b])
+                for (b = 0; b < a.points.length; ++b) V.insert(a.points[b])
     }
 
     function T() {
@@ -70,7 +70,7 @@
     function ea() {
         null == N && (N = {}, v("#region").children().each(function() {
             var a = v(this),
-                b = a.val();
+                b = a.val() * 20;
             b && (N[b] = a.text())
         }));
         v.get("http://m.agar.io/info", function(a) {
