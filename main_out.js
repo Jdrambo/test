@@ -63,8 +63,8 @@
     }
 
     function T() {
-        L = (J - n / 2) * 1/*/ s + w*/;
-        M = (K - p / 2) * 1/*/ s + x*/
+        L = (J - n / 2) / s + w;
+        M = (K - p / 2) / s + x
     }
 
     function ea() {
