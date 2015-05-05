@@ -6,8 +6,8 @@
         d = B.getContext("2d");
         B.onmousedown = function(a) {
             if (fa) {
-                var b = a.clientX - (5 + n / 5 / 2),
-                    c = a.clientY - (5 + n / 5 / 2);
+                var b = a.clientX - (5 + n),
+                    c = a.clientY - (5 + n);
                 if (Math.sqrt(b * b + c * c) <= n / 5 / 2) {
                     G();
                     C(17);
