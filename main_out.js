@@ -635,7 +635,7 @@
                     da ? (d.fillStyle = "#FFFFFF", d.strokeStyle = "#AAAAAA") : (d.fillStyle = this.color, d.strokeStyle = this.color);
                     d.beginPath();
                     d.lineWidth = 10;
-                    d.lineCap = "round";
+                    d.lineCap = "mitter";
                     d.lineJoin = this.isVirus ? "mitter" : "round";
                     a = this.getNumPoints();
                     d.moveTo(this.points[0].x, this.points[0].y);
@@ -693,7 +693,7 @@
                         b = this._ctx,
                         c = this._value,
                         d = this._size,
-                        g = d + "px Ubuntu";
+                        g = d + "px Arial";
                     b.font = g;
                     var e = b.measureText(c).width,
                         h = ~~(.2 * d);
