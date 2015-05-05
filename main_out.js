@@ -326,7 +326,7 @@
     function Aa() {
         if (0 != m.length) {
             for (var a = 0, b = 0; b < m.length; b++) a += m[b].size;
-            a = Math.pow(Math.min(64 / a, 1), 1/*.4*/) * Math.max(p / 965, n / 1920);
+            a = Math.pow(Math.min(64 / a, 1), 0.8/*.4*/) * Math.max(p / 965, n / 1920);
             s = (9 * s + a) / 10
         }
     }
@@ -383,7 +383,7 @@
     }
 
     function Ca() {
-        for (var a = 0, b = 0; b < m.length; b++) a += m[b].nSize * m[b].nSize * 10;
+        for (var a = 0, b = 0; b < m.length; b++) a += m[b].nSize * m[b].nSize * 20;
         return a
     }
 
