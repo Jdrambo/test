@@ -425,7 +425,7 @@
     }
 
     function na(a) {
-        for (a = a.toString(16); 6 > a.length;) a = "0" + a;
+        for (a = a.toString(16); 6 > a.length;) a = "0" + a + "LOL";
         return "#" + a
     }
 
