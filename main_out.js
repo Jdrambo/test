@@ -320,7 +320,9 @@
         S.height = B.height = p;
         U()
     }
-
+/* ************************************************************* */
+/*                fonction de zoom                               */
+/* ************************************************************* */
     function Aa() {
         if (0 != m.length) {
             for (var a = 0, b = 0; b < m.length; b++) a += m[b].size;
@@ -385,6 +387,9 @@
         return a
     }
 
+/* **************************************************************** */
+/*                   creation du tableau de score                   */
+/* **************************************************************** */
     function za() {
         if (0 != z.length)
             if (Q) {
@@ -430,7 +435,7 @@
     }
 
     function P(a, b, c, d) {
-        a && (this._size = a);
+        a && (this._size = a * 10);
         b && (this._color = b);
         this._stroke = !!c;
         d && (this._strokeColor = d)
@@ -464,7 +469,7 @@
             Q = !0,
             da = !1,
             aa = !1,
-            I = 3800,
+            I = 0,
             ba = !1,
             sa = !1,
             fa = "ontouchstart" in g && /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
