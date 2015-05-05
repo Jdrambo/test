@@ -45,7 +45,7 @@
         g.onresize = ga;
         ga();
         g.requestAnimationFrame ? g.requestAnimationFrame(ha) : setInterval(U, 1E3 / 60);
-        setInterval(G, 500);
+        setInterval(G, 100);
         ia(v("#region").val())
     }
 
@@ -368,6 +368,7 @@
         I = Math.max(I, Ca());
         0 != I && (null == O && (O = new P(24, "#FFFFFF")), O.setValue("Score: " + ~~(I / 100)), c = O.render(), b = c.width, d.globalAlpha = .2, d.fillStyle = "#000000", d.fillRect(10, p - 10 - 24 - 10, b + 10, 34), d.globalAlpha = 1, d.drawImage(c, 15, p - 10 - 24 - 5));
         Da();
+        alert('lol');
         a = +new Date - a;
         a > 1E3 / 60 ? q -= .01 : a < 1E3 / 65 && (q += .01);.4 > q && (q = .4);
         1 < q && (q = 1)
@@ -402,9 +403,9 @@
                 a.fillStyle = "#FFFFFF";
                 c = null;
                 c = "Leaderboard";
-                a.font = "60px Arial";
+                a.font = "30px Ubuntu";
                 a.fillText(c, 100 - a.measureText(c).width / 2, 40);
-                a.font = "20px Arial";
+                a.font = "20px Ubuntu";
                 for (b = 0; b < z.length; ++b) c = z[b] || "An unnamed cell", Q || 0 != m.length && m[0].name == c || (c = "An unnamed cell"), c = b + 1 + ". " + c, a.fillText(c, 100 - a.measureText(c).width / 2, 70 + 24 * b)
             } else A = null
     }
@@ -623,7 +624,7 @@
                 return a
             },
             shouldRender: function() {
-                return this.x + this.size + 40 < w + 20 - n / 2 / s || this.y + this.size + 40 < x - p / 2 / s || this.x - this.size - 40 > w + n / 2 / s || this.y - this.size - 40 > x + p / 2 / s ? !1 : !0
+                return this.x + this.size + 40 < w - n / 2 / s || this.y + this.size + 40 < x - p / 2 / s || this.x - this.size - 40 > w + n / 2 / s || this.y - this.size - 40 > x + p / 2 / s ? !1 : !0
             },
             draw: function() {
                 if (this.shouldRender()) {
