@@ -62,9 +62,13 @@
                 for (b = 0; b < a.points.length; ++b) V.insert(a.points[b])
     }
 
+/* **************************************************************** */
+/*                   probablement l orientation                     */
+/* **************************************************************** */
+
     function T() {
-        L = (J - n / 2) /*/ s + w*/;
-        M = (K - p / 2) /*/ s + x*/
+        L = (J - n / 2) / s + w;
+        M = (K - p / 2) / s + x
     }
 
     function ea() {
@@ -337,7 +341,7 @@
         Aa();
         F = +new Date;
         if (0 < m.length) {
-            for (var b = 0, c = 0, f = 0; f < m.length; f++) m[f].updatePos(), b += m[f].x / m.length, c += m[f].y / m.length;
+            for (var b = 0, c = 0, f = 0; f < m.length; f++) m[f].updatePos(), b += m[f].x /*/ m.length*/, c += m[f].y /*/ m.length*/;
             w = (w + b) / 2;
             x = (x + c) / 2
         }
