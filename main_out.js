@@ -63,14 +63,14 @@
     }
 
     function T() {
-        L = (J - n / 2) / s + w;
-        M = (K - p / 2) / s + x
+        L = (J - n / 2) /*/ s + w*/;
+        M = (K - p / 2) /*/ s + x*/
     }
 
     function ea() {
         null == N && (N = {}, v("#region").children().each(function() {
             var a = v(this),
-                b = a.val() * 20;
+                b = a.val();
             b && (N[b] = a.text())
         }));
         v.get("http://m.agar.io/info", function(a) {
