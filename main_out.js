@@ -368,7 +368,6 @@
         I = Math.max(I, Ca());
         0 != I && (null == O && (O = new P(24, "#FFFFFF")), O.setValue("Score: " + ~~(I / 100)), c = O.render(), b = c.width, d.globalAlpha = .2, d.fillStyle = "#000000", d.fillRect(10, p - 10 - 24 - 10, b + 10, 34), d.globalAlpha = 1, d.drawImage(c, 15, p - 10 - 24 - 5));
         Da();
-        alert('lol');
         a = +new Date - a;
         a > 1E3 / 60 ? q -= .01 : a < 1E3 / 65 && (q += .01);.4 > q && (q = .4);
         1 < q && (q = 1)
@@ -624,7 +623,7 @@
                 return a
             },
             shouldRender: function() {
-                return this.x + this.size + 40 < w - n / 2 / s || this.y + this.size + 40 < x - p / 2 / s || this.x - this.size - 40 > w + n / 2 / s || this.y - this.size - 40 > x + p / 2 / s ? !1 : !0
+                return this.x + this.size + 40 < w + 20 - n / 2 / s || this.y + this.size + 40 < x - p / 2 / s || this.x - this.size - 40 > w + n / 2 / s || this.y - this.size - 40 > x + p / 2 / s ? !1 : !0
             },
             draw: function() {
                 if (this.shouldRender()) {
@@ -635,7 +634,7 @@
                     this.movePoints();
                     da ? (d.fillStyle = "#FFFFFF", d.strokeStyle = "#000000") : (d.fillStyle = this.color, d.strokeStyle = this.color);
                     d.beginPath();
-                    d.lineWidth = 50;
+                    d.lineWidth = 10;
                     d.lineCap = "round";
                     d.lineJoin = this.isVirus ? "mitter" : "round";
                     a = this.getNumPoints();
