@@ -178,7 +178,7 @@
 
     function ya(a) {
         F = +new Date;
-        var b = 1/*Math.random()*/,
+        var b = Math.random(),
             c = 1;
         aa = !1;
         for (var f = a.getUint16(c, !0), c = c + 2, d = 0; d < f; ++d) {
@@ -288,8 +288,8 @@
 
     function G() {
         if (null != h && h.readyState == h.OPEN) {
-            var a = J - n / 2,
-                b = K - p / 2;
+            var a = J - n /*/ 2*/,
+                b = K - p /*/ 2*/;
             64 > a * a + b * b || pa == L && qa == M || (pa = L, qa = M, a = new ArrayBuffer(21), b = new DataView(a), b.setUint8(0, 16), b.setFloat64(1, L, !0), b.setFloat64(9, M, !0), b.setUint32(17, 0, !0), h.send(a))
         }
     }
