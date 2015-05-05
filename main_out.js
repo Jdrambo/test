@@ -314,8 +314,8 @@
     }
 
     function ga() {
-        n = g.innerWidth;
-        p = g.innerHeight;
+        n = g.innerWidth * 4;
+        p = g.innerHeight * 4;
         S.width = B.width = n;
         S.height = B.height = p;
         U()
