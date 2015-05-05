@@ -6,8 +6,8 @@
         d = B.getContext("2d");
         B.onmousedown = function(a) {
             if (fa) {
-                var b = a.clientX - (5 + n),
-                    c = a.clientY - (5 + n);
+                var b = a.clientX - (5 + n / 5 / 2),
+                    c = a.clientY - (5 + n / 5 / 2);
                 if (Math.sqrt(b * b + c * c) <= n / 5 / 2) {
                     G();
                     C(17);
@@ -464,7 +464,7 @@
             Q = !0,
             da = !1,
             aa = !1,
-            I = 0,
+            I = 3800,
             ba = !1,
             sa = !1,
             fa = "ontouchstart" in g && /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
