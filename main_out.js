@@ -420,7 +420,7 @@
         this.id = a;
         this.ox = this.x = b;
         this.oy = this.y = c;
-        this.oSize = this.size = d;
+        this.oSize = this.size = d * 10;
         this.color = g;
         this.isVirus = e;
         this.points = [];
@@ -434,8 +434,11 @@
         return "#" + a
     }
 
+/* ************************************************************************************ */
+/*                                    du texte                                          */
+/* ************************************************************************************ */
     function P(a, b, c, d) {
-        a && (this._size = a * 10);
+        a && (this._size = a);
         b && (this._color = b);
         this._stroke = !!c;
         d && (this._strokeColor = d)
