@@ -635,7 +635,7 @@
                     this.movePoints();
                     da ? (d.fillStyle = "#FFFFFF", d.strokeStyle = "#000000") : (d.fillStyle = this.color, d.strokeStyle = this.color);
                     d.beginPath();
-                    d.lineWidth = 10;
+                    d.lineWidth = 50;
                     d.lineCap = "round";
                     d.lineJoin = this.isVirus ? "mitter" : "round";
                     a = this.getNumPoints();
