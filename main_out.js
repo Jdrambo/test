@@ -1,15 +1,14 @@
 (function(g, v) {
     function ta() {
-        /* git hub test */
         ea();
         setInterval(ea, 18E4);
         B = S = document.getElementById("canvas");
         d = B.getContext("2d");
         B.onmousedown = function(a) {
             if (fa) {
-                var b = a.clientX - (5 + n),
-                    c = a.clientY - (5 + n);
-                if (Math.sqrt(b * b + c * c) <= n) {
+                var b = a.clientX - (5 + n / 5 / 2),
+                    c = a.clientY - (5 + n / 5 / 2);
+                if (Math.sqrt(b * b + c * c) <= n / 5 / 2) {
                     G();
                     C(17);
                     return
@@ -53,10 +52,10 @@
     function ua() {
         for (var a = Number.POSITIVE_INFINITY, b = Number.POSITIVE_INFINITY, c = Number.NEGATIVE_INFINITY, f = Number.NEGATIVE_INFINITY, d = 0, e = 0; e < r.length; e++) d = Math.max(r[e].size, d), a = Math.min(r[e].x, a), b = Math.min(r[e].y, b), c = Math.max(r[e].x, c), f = Math.max(r[e].y, f);
         V = QUAD.init({
-            minX: a - (d + 400),
-            minY: b - (d + 400),
-            maxX: c + (d + 400),
-            maxY: f + (d + 400)
+            minX: a - (d + 100),
+            minY: b - (d + 100),
+            maxX: c + (d + 100),
+            maxY: f + (d + 100)
         });
         for (e = 0; e < r.length; e++)
             if (a = r[e], a.shouldRender())
@@ -64,8 +63,8 @@
     }
 
     function T() {
-        L = (J - n / 2) / s + w * 3;
-        M = (K - p / 2) / s + x * 3
+        L = (J - n / 2) / s + w;
+        M = (K - p / 2) / s + x
     }
 
     function ea() {
@@ -315,8 +314,8 @@
     }
 
     function ga() {
-        n = g.innerWidth * 4;
-        p = g.innerHeight * 4;
+        n = g.innerWidth;
+        p = g.innerHeight;
         S.width = B.width = n;
         S.height = B.height = p;
         U()
@@ -359,7 +358,7 @@
             return a.size == b.size ? a.id - b.id : a.size - b.size
         });
         d.save();
-        d.translate(n , p);
+        d.translate(n / 2, p / 2);
         d.scale(s, s);
         d.translate(-w, -x);
         for (f = 0; f < E.length; f++) E[f].draw();
@@ -383,7 +382,7 @@
 
     function Ca() {
         for (var a = 0, b = 0; b < m.length; b++) a += m[b].nSize * m[b].nSize;
-        return (a * 4)
+        return a
     }
 
     function za() {
@@ -400,10 +399,10 @@
                 a.fillStyle = "#000000";
                 a.fillRect(0, 0, 200, b);
                 a.globalAlpha = 1;
-                a.fillStyle = "#FF0000";
+                a.fillStyle = "#FFFFFF";
                 c = null;
-                c = "LOLILOL";
-                a.font = "30px Arial";
+                c = "Leaderboard";
+                a.font = "30px Ubuntu";
                 a.fillText(c, 100 - a.measureText(c).width / 2, 40);
                 a.font = "20px Ubuntu";
                 for (b = 0; b < z.length; ++b) c = z[b] || "An unnamed cell", Q || 0 != m.length && m[0].name == c || (c = "An unnamed cell"), c = b + 1 + ". " + c, a.fillText(c, 100 - a.measureText(c).width / 2, 70 + 24 * b)
@@ -417,7 +416,7 @@
         this.ox = this.x = b;
         this.oy = this.y = c;
         this.oSize = this.size = d;
-        this.color = #000000;
+        this.color = g;
         this.isVirus = e;
         this.points = [];
         this.pointsAcc = [];
@@ -426,7 +425,7 @@
     }
 
     function na(a) {
-        for (a = a.toString(16); 6 > a.length;) a = "0" + a + "LOL";
+        for (a = a.toString(16); 6 > a.length;) a = "0" + a;
         return "#" + a
     }
 
@@ -465,7 +464,7 @@
             Q = !0,
             da = !1,
             aa = !1,
-            I = 1,
+            I = 0,
             ba = !1,
             sa = !1,
             fa = "ontouchstart" in g && /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
@@ -636,10 +635,10 @@
                     da ? (d.fillStyle = "#FFFFFF", d.strokeStyle = "#AAAAAA") : (d.fillStyle = this.color, d.strokeStyle = this.color);
                     d.beginPath();
                     d.lineWidth = 10;
-                    d.lineCap = "mitter";
+                    d.lineCap = "round";
                     d.lineJoin = this.isVirus ? "mitter" : "round";
                     a = this.getNumPoints();
-                    d.moveTo(this.points[0].x + 100, this.points[0].y + 100);
+                    d.moveTo(this.points[0].x, this.points[0].y);
                     for (var b = 1; b <= a; ++b) {
                         var c = b % a;
                         d.lineTo(this.points[c].x, this.points[c].y)
@@ -664,7 +663,7 @@
         };
         P.prototype = {
             _value: "",
-            _color: "#ff0000",
+            _color: "#000000",
             _stroke: !1,
             _strokeColor: "#000000",
             _size: 16,
@@ -694,7 +693,7 @@
                         b = this._ctx,
                         c = this._value,
                         d = this._size,
-                        g = d + "px Arial";
+                        g = d + "px Ubuntu";
                     b.font = g;
                     var e = b.measureText(c).width,
                         h = ~~(.2 * d);
