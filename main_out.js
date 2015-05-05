@@ -288,8 +288,8 @@
 
     function G() {
         if (null != h && h.readyState == h.OPEN) {
-            var a = J - n /*/ 2*/,
-                b = K - p /*/ 2*/;
+            var a = J - n / 2,
+                b = K - p / 2;
             64 > a * a + b * b || pa == L && qa == M || (pa = L, qa = M, a = new ArrayBuffer(21), b = new DataView(a), b.setUint8(0, 16), b.setFloat64(1, L, !0), b.setFloat64(9, M, !0), b.setUint32(17, 0, !0), h.send(a))
         }
     }
@@ -649,7 +649,7 @@
                     d.save();
                     this.drawTime = F;
                     var a = this.updatePos();
-                    this.destroyed && (d.globalAlpha *= 1 - a);
+                    this.destroyed && (d.globalAlpha *= 1/* - a*/);
                     this.movePoints();
                     da ? (d.fillStyle = "#FFFFFF", d.strokeStyle = "#AAAAAA") : (d.fillStyle = this.color, d.strokeStyle = this.color);
                     d.beginPath();
@@ -685,7 +685,7 @@
             _color: "#000000",
             _stroke: !1,
             _strokeColor: "#000000",
-            _size: 40,
+            _size: 10,
             _canvas: null,
             _ctx: null,
             _dirty: !1,
