@@ -1,5 +1,6 @@
 (function(g, v) {
     function ta() {
+        /* git hub test */
         ea();
         setInterval(ea, 18E4);
         B = S = document.getElementById("canvas");
@@ -464,7 +465,7 @@
             Q = !0,
             da = !1,
             aa = !1,
-            I = 8500,
+            I = 1,
             ba = !1,
             sa = !1,
             fa = "ontouchstart" in g && /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
@@ -638,7 +639,7 @@
                     d.lineCap = "mitter";
                     d.lineJoin = this.isVirus ? "mitter" : "round";
                     a = this.getNumPoints();
-                    d.moveTo(this.points[0].x, this.points[0].y);
+                    d.moveTo(this.points[0].x + 100, this.points[0].y + 100);
                     for (var b = 1; b <= a; ++b) {
                         var c = b % a;
                         d.lineTo(this.points[c].x, this.points[c].y)
@@ -663,7 +664,7 @@
         };
         P.prototype = {
             _value: "",
-            _color: "#000000",
+            _color: "#ff0000",
             _stroke: !1,
             _strokeColor: "#000000",
             _size: 16,
