@@ -351,8 +351,8 @@
             s);
         b = n / s;
         c = p / s;
-        for (f = -.5 + (-w + b / 2) % 50; f < b; f += 50) d.beginPath(), d.moveTo(f, 0), d.lineTo(f, c), d.stroke();
-        for (f = -.5 + (-x + c / 2) % 50; f < c; f += 50) d.beginPath(), d.moveTo(0, f), d.lineTo(b, f), d.stroke();
+        for (f = -.5 + (-w + b / /*2*/) % 50; f < b; f += 50) d.beginPath(), d.moveTo(f, 0), d.lineTo(f, c), d.stroke();
+        for (f = -.5 + (-x + c / /*2*/) % 50; f < c; f += 50) d.beginPath(), d.moveTo(0, f), d.lineTo(b, f), d.stroke();
         d.restore();
         r.sort(function(a, b) {
             return a.size == b.size ? a.id - b.id : a.size - b.size
