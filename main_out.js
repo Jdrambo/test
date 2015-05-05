@@ -382,7 +382,7 @@
 
     function Ca() {
         for (var a = 0, b = 0; b < m.length; b++) a += m[b].nSize * m[b].nSize;
-        return a
+        return (a * 4)
     }
 
     function za() {
