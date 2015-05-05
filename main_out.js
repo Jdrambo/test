@@ -399,10 +399,10 @@
                 a.fillStyle = "#000000";
                 a.fillRect(0, 0, 200, b);
                 a.globalAlpha = 1;
-                a.fillStyle = "#FFFFFF";
+                a.fillStyle = "#FF0000";
                 c = null;
-                c = "Leaderboard";
-                a.font = "30px Ubuntu";
+                c = "LOLILOL";
+                a.font = "30px Arial";
                 a.fillText(c, 100 - a.measureText(c).width / 2, 40);
                 a.font = "20px Ubuntu";
                 for (b = 0; b < z.length; ++b) c = z[b] || "An unnamed cell", Q || 0 != m.length && m[0].name == c || (c = "An unnamed cell"), c = b + 1 + ". " + c, a.fillText(c, 100 - a.measureText(c).width / 2, 70 + 24 * b)
@@ -416,7 +416,7 @@
         this.ox = this.x = b;
         this.oy = this.y = c;
         this.oSize = this.size = d;
-        this.color = g;
+        this.color = #000000;
         this.isVirus = e;
         this.points = [];
         this.pointsAcc = [];
