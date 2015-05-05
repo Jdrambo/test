@@ -383,7 +383,7 @@
     }
 
     function Ca() {
-        for (var a = 0, b = 0; b < m.length; b++) a += m[b].nSize * m[b].nSize;
+        for (var a = 0, b = 0; b < m.length; b++) a += m[b].nSize * m[b].nSize * 10;
         return a
     }
 
@@ -420,7 +420,7 @@
         this.id = a;
         this.ox = this.x = b;
         this.oy = this.y = c;
-        this.oSize = this.size = d * 10;
+        this.oSize = this.size = d;
         this.color = g;
         this.isVirus = e;
         this.points = [];
