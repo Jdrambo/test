@@ -325,7 +325,7 @@
         if (0 != m.length) {
             for (var a = 0, b = 0; b < m.length; b++) a += m[b].size;
             a = Math.pow(Math.min(64 / a, 1), .4) * Math.max(p / 965, n / 1920);
-            s = (9 * s + a) / 2
+            s = (9 * s + a) / 10
         }
     }
 
@@ -358,7 +358,7 @@
             return a.size == b.size ? a.id - b.id : a.size - b.size
         });
         d.save();
-        d.translate(n / 2, p / 2);
+        d.translate(n , p);
         d.scale(s, s);
         d.translate(-w, -x);
         for (f = 0; f < E.length; f++) E[f].draw();
