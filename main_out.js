@@ -324,7 +324,7 @@
     function Aa() {
         if (0 != m.length) {
             for (var a = 0, b = 0; b < m.length; b++) a += m[b].size;
-            a = Math.pow(Math.min(64 / a, 1), 1/*.4*/) * Math.max(p / 965, n / 1920);
+            a = Math.pow(Math.min(64 / a, 1), .4) * Math.max(p / 965, n / 1920);
             s = (9 * s + a) / 10
         }
     }
