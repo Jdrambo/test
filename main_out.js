@@ -6,9 +6,9 @@
         d = B.getContext("2d");
         B.onmousedown = function(a) {
             if (fa) {
-                var b = a.clientX - (5 + n / 5 / 2),
-                    c = a.clientY - (5 + n / 5 / 2);
-                if (Math.sqrt(b * b + c * c) <= n / 5 / 2) {
+                var b = a.clientX - (5 + n /*/ 5 / 2*/),
+                    c = a.clientY - (5 + n /*/ 5 / 2*/);
+                if (Math.sqrt(b * b + c * c) <= n /*/ 5 / 2*/) {
                     G();
                     C(17);
                     return
@@ -649,7 +649,7 @@
                     d.save();
                     this.drawTime = F;
                     var a = this.updatePos();
-                    this.destroyed && (d.globalAlpha *= 1/* - a*/);
+                    this.destroyed && (d.globalAlpha *= 1 - a);
                     this.movePoints();
                     da ? (d.fillStyle = "#FFFFFF", d.strokeStyle = "#AAAAAA") : (d.fillStyle = this.color, d.strokeStyle = this.color);
                     d.beginPath();
