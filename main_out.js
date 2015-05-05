@@ -693,7 +693,7 @@
                         b = this._ctx,
                         c = this._value,
                         d = this._size,
-                        g = d + "px Ubuntu";
+                        g = d + "px serif";
                     b.font = g;
                     var e = b.measureText(c).width,
                         h = ~~(.2 * d);
