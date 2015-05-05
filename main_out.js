@@ -464,7 +464,7 @@
             Q = !0,
             da = !1,
             aa = !1,
-            I = 0,
+            I = 8500,
             ba = !1,
             sa = !1,
             fa = "ontouchstart" in g && /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
