@@ -6,8 +6,8 @@
         d = B.getContext("2d");
         B.onmousedown = function(a) {
             if (fa) {
-                var b = a.clientX - (5 + n / 5 / 2),
-                    c = a.clientY - (5 + n / 5 / 2);
+                var b = a.clientX - (10 + n / 5 / 2),
+                    c = a.clientY - (10 + n / 5 / 2);
                 if (Math.sqrt(b * b + c * c) <= n / 5 / 2) {
                     G();
                     C(17);
@@ -34,7 +34,7 @@
             87 != f.keyCode || c || (G(), C(21), c = !0)
         };
         g.onkeyup = function(f) {
-            32 == f.keyCode && (a = !1);
+            32 == f.keyCode && (a = 1);
             87 == f.keyCode && (c = !1);
             81 == f.keyCode && b && (C(19), b = !1)
         };
@@ -219,7 +219,7 @@
                         u = k - g,
                         k = l * (1 - n),
                         s = l * (1 - n * u),
-                        n = l * (1 - n * (1 - u)),
+                        n = l * (1 + n * (1 - u)),
                         p =
                         u = 0,
                         q = 0;
@@ -364,10 +364,11 @@
         for (f = 0; f < E.length; f++) E[f].draw();
         for (f = 0; f < r.length; f++) r[f].draw();
         d.restore();
-        A && 0 != z.length && d.drawImage(A, n - A.width - 10, 10);
+        A && 0 != z.length && d.drawImage(A, n - (A.width * 4) - 10, 10);
         I = Math.max(I, Ca());
         0 != I && (null == O && (O = new P(24, "#FFFFFF")), O.setValue("Score: " + ~~(I / 100)), c = O.render(), b = c.width, d.globalAlpha = .2, d.fillStyle = "#000000", d.fillRect(10, p - 10 - 24 - 10, b + 10, 34), d.globalAlpha = 1, d.drawImage(c, 15, p - 10 - 24 - 5));
         Da();
+        alert('lol');
         a = +new Date - a;
         a > 1E3 / 60 ? q -= .01 : a < 1E3 / 65 && (q += .01);.4 > q && (q = .4);
         1 < q && (q = 1)
@@ -501,7 +502,7 @@
             q = 1,
             O = null,
             R = {},
-            Ea = "poland;usa;china;russia;canada;australia;spain;brazil;germany;ukraine;france;sweden;hitler;north korea;south korea;japan;united kingdom;earth;greece;latvia;lithuania;estonia;finland;norway;cia;maldivas;austria;nigeria;reddit;yaranaika;confederate;9gag;indiana;4chan;italy;ussr;pewdiepie;bulgaria;tumblr;2ch.hk;hong kong;portugal;jamaica;german empire;mexico;sanik;switzerland;croatia;chile;indonesia;bangladesh;thailand;iran;iraq;peru;moon;botswana;bosnia;netherlands;european union;taiwan;pakistan;hungary;satanist;qing dynasty;nazi;matriarchy;patriarchy;feminism;ireland;texas;facepunch;prodota;cambodia;steam;piccolo;ea;india;kc;denmark;quebec;ayy lmao;sealand;bait;tsarist russia;origin;vinesauce;stalin;belgium;luxembourg;stussy;prussia;8ch;argentina;scotland;sir;romania;belarus;wojak;isis;doge".split(";"),
+            Ea = "poland;usa;china;russia;canada;australia;spain;brazil;germany;ukraine;france;sweden;hitler;north korea;south korea;japan;united kingdom;earth;greece;latvia;lithuania;estonia;finland;norway;cia;maldivas;austria;nigeria;reddit;yaranaika;confederate;9gag;indiana;4chan;italy;ussr;pewdiepie;bulgaria;tumblr;2ch.hk;hong kong;portugal;jamaica;german empire;mexico;sanik;switzerland;croatia;chile;indonesia;bangladesh;thailand;iran;iraq;peru;moon;botswana;bosnia;netherlands;european union;taiwan;pakistan;hungary;satanist;qing dynasty;nazi;matriarchy;patriarchy;feminism;ireland;texas;facepunch;prodota;cambodia;steam;piccolo;ea;india;kc;denmark;quebec;ayy lmao;sealand;bait;tsarist russia;origin;vinesauce;stalin;belgium;luxembourg;stussy;prussia;8ch;argentina;scotland;sir;romania".split(";"),
             Fa = ["m'blob"];
         oa.prototype = {
             id: 0,
@@ -632,7 +633,7 @@
                     var a = this.updatePos();
                     this.destroyed && (d.globalAlpha *= 1 - a);
                     this.movePoints();
-                    da ? (d.fillStyle = "#FFFFFF", d.strokeStyle = "#AAAAAA") : (d.fillStyle = this.color, d.strokeStyle = this.color);
+                    da ? (d.fillStyle = "#FFFFFF", d.strokeStyle = "#000000") : (d.fillStyle = this.color, d.strokeStyle = this.color);
                     d.beginPath();
                     d.lineWidth = 10;
                     d.lineCap = "round";
@@ -697,11 +698,11 @@
                     b.font = g;
                     var e = b.measureText(c).width,
                         h = ~~(.2 * d);
-                    a.width = e + 6;
-                    a.height = d + h;
+                    a.width = e + 200;
+                    a.height = d + h * 2;
                     b.font = g;
                     b.globalAlpha = 1;
-                    b.lineWidth = 3;
+                    b.lineWidth = 12;
                     b.strokeStyle = this._strokeColor;
                     b.fillStyle = this._color;
                     this._stroke && b.strokeText(c, 3, d - h / 2);
